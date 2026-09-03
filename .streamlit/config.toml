@@ -1,1 +1,9 @@
-şŠmş&yºŞÃòân¶«Ëñè™æë{Ü™ßì…éez{ì†X§{_?n)ÿ¦Ã©z¶­Š‰ç¢Ú^®h­µç[jÇºâ)ïjXj¸.™éí²ÚŞjib·÷(ø ¶‰¥RÆ y¶¬{®vçºh¢ø¥zŠ.µø¥y¶ëy©­æ¤zw(uçhºÚn¶êbÚ%Šw¬¡ù^aéƒu×œ¡×yÊz)éºØazZ]ŠÊek+aŠÉ²Æ z(§¦ëb›­~)^uçÚº[_¢»-v)è¢ëiºÚ.¶›­~)^uçÚº[_¢»-v‹­
+[theme]
+primaryColor = "#1E8E6A"
+backgroundColor = "#F7FAF8"
+secondaryBackgroundColor = "#EAF4F0"
+textColor = "#17352D"
+font = "sans serif"
+
+[server]
+headless = true
