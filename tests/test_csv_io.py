@@ -2,13 +2,13 @@ from datetime import date
 
 import pytest
 
-from loanbreaker.csv_io import (
+from loanlens.csv_io import (
     payments_from_csv,
     payments_to_csv,
     rates_from_csv,
     rates_to_csv,
 )
-from loanbreaker.models import Payment, RateChange
+from loanlens.models import Payment, RateChange
 
 
 def test_payment_csv_round_trip_preserves_optional_credited_date() -> None:

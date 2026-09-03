@@ -1,4 +1,4 @@
-"""LoanBreaker financial calculation package."""
+"""LoanLens financial calculation package."""
 
 from .engine import (
     PayoffProjection,

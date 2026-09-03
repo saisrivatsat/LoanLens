@@ -1,4 +1,4 @@
-"""CSV import/export helpers for session-only LoanBreaker data."""
+"""CSV import/export helpers for session-only LoanLens data."""
 
 from __future__ import annotations
 

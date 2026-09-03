@@ -10,7 +10,7 @@ venv/
 .env.*
 .streamlit/secrets.toml
 
-# LoanBreaker V1 keeps user data in the browser session. Never commit exports,
+# LoanLens V1 keeps user data in the browser session. Never commit exports,
 # lender statements, or local financial data.
 data/
 exports/

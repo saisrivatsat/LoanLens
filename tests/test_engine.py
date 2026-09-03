@@ -2,14 +2,14 @@ from datetime import date
 
 import pytest
 
-from loanbreaker.engine import (
+from loanlens.engine import (
     daily_interest,
     project_payoff,
     rate_on,
     simulate_extra_payment,
     simulate_history,
 )
-from loanbreaker.models import LoanConfig, Payment, RateChange
+from loanlens.models import LoanConfig, Payment, RateChange
 
 
 def make_config(**overrides) -> LoanConfig:

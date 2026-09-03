@@ -6,18 +6,18 @@ from uuid import uuid4
 import pandas as pd
 import streamlit as st
 
-from loanbreaker.csv_io import (
+from loanlens.csv_io import (
     payments_from_csv,
     payments_to_csv,
     rates_from_csv,
     rates_to_csv,
 )
-from loanbreaker.engine import project_payoff, simulate_extra_payment, simulate_history
-from loanbreaker.models import LoanConfig, Payment, RateChange
+from loanlens.engine import project_payoff, simulate_extra_payment, simulate_history
+from loanlens.models import LoanConfig, Payment, RateChange
 
 
 st.set_page_config(
-    page_title="LoanBreaker",
+    page_title="LoanLens",
     page_icon="↘",
     layout="wide",
     initial_sidebar_state="expanded",
@@ -168,8 +168,8 @@ def render_header() -> None:
     st.markdown(
         """
         <div class="lb-hero">
-          <h1>LoanBreaker</h1>
-          <p>Know where your loan stands. See what an extra payment could change.</p>
+          <h1>LoanLens</h1>
+          <p>See your loan clearly. Pay it down confidently.</p>
         </div>
         """,
         unsafe_allow_html=True,
@@ -377,7 +377,7 @@ def render_rate_history(config: LoanConfig) -> None:
         st.download_button(
             "Download rate history CSV",
             data=rates_to_csv(rates),
-            file_name="loanbreaker_rate_history.csv",
+            file_name="loanlens_rate_history.csv",
             mime="text/csv",
             use_container_width=True,
         )
@@ -630,7 +630,7 @@ def render_add_payment() -> None:
         st.download_button(
             "Download payments CSV",
             data=payments_to_csv(payments),
-            file_name="loanbreaker_payments.csv",
+            file_name="loanlens_payments.csv",
             mime="text/csv",
             use_container_width=True,
         )
@@ -759,7 +759,7 @@ initialize_state()
 render_header()
 
 with st.sidebar:
-    st.title("LoanBreaker")
+    st.title("LoanLens")
     area = st.radio("Go to", ["My Loan", "Add Payment", "What If"])
     st.divider()
     st.caption("V1 privacy")
@@ -775,5 +775,5 @@ else:
 
 st.divider()
 st.caption(
-    "LoanBreaker provides estimates for educational planning only. Lender calculations can differ due to daily conventions, posting dates, rounding, capitalization, fees, holidays, and contract terms. Always confirm decisions with your lender statement or a qualified financial professional."
+    "LoanLens provides estimates for educational planning only. Lender calculations can differ due to daily conventions, posting dates, rounding, capitalization, fees, holidays, and contract terms. Always confirm decisions with your lender statement or a qualified financial professional."
 )
